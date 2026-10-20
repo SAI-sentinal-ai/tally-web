@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Tally" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="./icons/favicon-32.png" />
+    <title>Tally</title>
+    <script type="module" crossorigin src="./assets/index-B_HgO02P.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DJ3Q6XLY.css">
+  </head>
+  <body>
+    <div id="app">
+      <aside id="sidebar" hidden>
+        <input id="search" type="search" placeholder="Search history…" spellcheck="false" autocapitalize="off" autocorrect="off" />
+        <ul id="history"></ul>
+      </aside>
+      <main>
+        <header data-tauri-drag-region>
+          <span id="title" data-tauri-drag-region>Sheet</span>
+          <nav>
+            <button id="btn-history" title="History (Ctrl+H)">History</button>
+            <button id="btn-globals" title="Variables (Ctrl+G)">Variables</button>
+            <button id="btn-new" title="New sheet (Ctrl+N)">New</button>
+            <button id="btn-help" class="icon" title="How Tally works (F1)" aria-label="How Tally works">
+              <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true">
+                <circle cx="8" cy="8" r="6.75" fill="none" stroke="currentColor" stroke-width="1.5" />
+                <circle cx="8" cy="4.9" r="1" fill="currentColor" />
+                <path d="M8 7.2v4.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </button>
+          </nav>
+        </header>
+        <div id="editor">
+          <div id="edit">
+            <pre id="highlight" aria-hidden="true"></pre>
+            <textarea id="input" spellcheck="false" wrap="off" autocomplete="off" autocapitalize="off" autocorrect="off"
+              placeholder="tree = 120&#10;freight = 45&#10;cost = tree + gst + freight&#10;cost + 40%"></textarea>
+            <ul id="ac" role="listbox" hidden></ul>
+          </div>
+          <div id="results"><div id="results-inner"></div></div>
+          <section id="account" hidden>
+            <div class="acct-card">
+              <h3>Sync</h3>
+              <div id="acct-body"></div>
+            </div>
+          </section>
+          <section id="help" hidden>
+            <div class="acct-card help-card" id="help-body"></div>
+          </section>
+        </div>
+        <div id="keys" hidden></div>
+        <footer>
+          <span id="status">Esc hides · Ctrl+Enter copies the answer</span>
+          <button id="sync-btn" data-state="off" title="Sync"><span class="dot"></span><span id="sync-label">Sign in to sync</span></button>
+          <button id="answer" title="Copy">&nbsp;</button>
+        </footer>
+      </main>
+    </div>
+    <div id="toast" hidden>Copied</div>
+  </body>
+</html>
