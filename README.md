@@ -2,6 +2,8 @@
 
 Tally is a notepad calculator: you write sums on lines, name values, and keep a history. This repo holds only the built web app, an installable PWA for my own use.
 
+![Screenshot](docs/screenshot.png)
+
 ## Use
 
 Open `index.html` through any static file server, for example:
