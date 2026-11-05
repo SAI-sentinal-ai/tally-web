@@ -25,5 +25,8 @@ None here, and none must ever be added: the repo is public. The sync keys inside
 - Changes to this repo are overwritten by the next `deploy:web`, including README, CLAUDE.md, STATUS.md and DECISIONS.md. Fix things in `tally`, then redeploy.
 - Public: no source, personal or business details, server names or keys. That goes for these docs too.
 
+## Design system
+Design system: built output of `tally`; follow its design (tokens in tally's `src/styles.css`). Not Minna, not Pots of Joy.
+
 ## Related
 - `tally`: the source, its `CLAUDE.md` and `scripts/deploy-web.sh`.
