@@ -1,10 +1,10 @@
 // Offline support for the web (iPhone) version. Built files have hashed names and never
 // change, so they're served from the cache; the page itself is fetched fresh when possible,
 // which is how a new version arrives. Sync requests go to Supabase and aren't touched.
-const CACHE = "tally-v1";
+const CACHE = "tally-v2";
 
 self.addEventListener("install", (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(["./", "manifest.webmanifest", "icons/apple-touch-icon.png"])));
+  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(["./", "manifest.webmanifest", "apple-touch-icon.png"])));
   self.skipWaiting();
 });
 
